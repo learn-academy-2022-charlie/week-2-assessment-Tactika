@@ -10,7 +10,7 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
-// --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multipled by 3.
+// --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multiplied by 3.
 
 // a) Create a test with expect statements for each of the variables provided.
 
@@ -24,16 +24,26 @@ const numbersArray2 = [24, 27, 30, 33, 36]
 
 
 
-// --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.
+// --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisible by three or not.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const num1 = 15
-// Expected output: "15 is divisible by three"
-const num2 = 0
-// Expected output: "0 is divisible by three"
-const num3 = -7
-// Expected output: "-7 is not divisible by three"
+//Pseudo Code for Test
+    //Describe will take in name of function to be tested
+    //It will describe what the functions outcome should return
+    //Expect will have the individual test cases with the provided test data
+
+describe("divisibleBy3", () => {
+    it("Takes in a number and returns whether or not it is divisible by 3 or not", () => {
+        const num1 = 15
+        const num2 = 0
+        const num3 = -7
+
+        expect(divisibleBy3(num1).toEqual("15 is divisible by three"))
+        expect(divisibleBy3(num2).toEqual("0 is divisible by three"))
+        expect(divisibleBy3(num3).toEqual("-7 is not divisible by three"))
+    })
+})
 
 
 // b) Create the function that makes the test pass.
