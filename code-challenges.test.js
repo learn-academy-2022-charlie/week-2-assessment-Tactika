@@ -81,19 +81,23 @@ describe("divisibleBy3", () => {
         - Fourth Input: "The string of 'ten' is not a valid number."
 */
 
-const divisibleBy3 = (number) =>{
-    return (
-        typeof number !== "number" ? `The ${typeof number} of "${number}" is not a valid number.`:
-        number % 3 === 0 || number === 0 ? `${number} is divisible by three`:
-        `${number} is not divisible by three`
-    )
-}
+// const divisibleBy3 = (number) =>{
+//     return (
+//         typeof number !== "number" ? `The ${typeof number} of "${number}" is not a valid number.`:
+//         number % 3 === 0 || number === 0 ? `${number} is divisible by three`:
+//         `${number} is not divisible by three`
+//     )
+// }
 /* 
 ---------- Green Test Results ---------------------
     PASS  ./code-challenges.test.js
     divisibleBy3
         ✓ Takes in a number and returns whether or not it is divisible by 3 or not (2 ms)
-*/        
+*/
+// Refactor
+//      - Refactored to remove parameter parenthesis and remove return statement for one line function - refactor would be good for minifying code, but poor for readability
+
+const divisibleBy3 = number => typeof number !== "number" ? `The ${typeof number} of "${number}" is not a valid number.`: number % 3 === 0 || number === 0 ? `${number} is divisible by three`:`${number} is not divisible by three`    
 
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
