@@ -38,17 +38,62 @@ describe("divisibleBy3", () => {
         const num1 = 15
         const num2 = 0
         const num3 = -7
+        const num4 = "ten"
 
-        expect(divisibleBy3(num1).toEqual("15 is divisible by three"))
-        expect(divisibleBy3(num2).toEqual("0 is divisible by three"))
-        expect(divisibleBy3(num3).toEqual("-7 is not divisible by three"))
+        expect(divisibleBy3(num1)).toEqual("15 is divisible by three")
+        expect(divisibleBy3(num2)).toEqual("0 is divisible by three")
+        expect(divisibleBy3(num3)).toEqual("-7 is not divisible by three")
+        expect(divisibleBy3(num4)).toEqual("The string of \"ten\" is not a valid number.")
     })
 })
-
+/* 
+---------- Red Test Results ---------------------
+    RED - (Failed Test Run)
+    FAIL  ./code-challenges.test.js
+    divisibleBy3
+        ✕ Takes in a number and returns whether or not it is divisible by 3 or not (1 ms)
+    ReferenceError: divisibleBy3 is not defined
+*/
 
 // b) Create the function that makes the test pass.
 
+/* 
+---------- Pseudo Code ---------------------
+    Create a function named divisibleBy3
+    divisibleBy3 takes in a single parameter which is any number
+        Logic:
+            - Take in any number: positive or negative... including zero
+            - Check if input is a type of number
+            - If input is number check if it is divisible by three with no remainder
+                - if number is divisible by three return that the number is divisible by three
+                - if number is not divisible by three, return that the number is not divisible by three
+                - if input isn't of number type, return error message stating the input isn't a valid number
+    Test Arguments:
+        - First Input: 15
+        - Second Input: 0
+        - Third Input: -7
+        - Fourth Input: "ten"
 
+    Expected Test Output:
+        - First Output: "15 is divisible by three"
+        - Second Output: "0 is divisible by three"
+        - Third Output: "-7 is not divisible by three"
+        - Fourth Input: "The string of 'ten' is not a valid number."
+*/
+
+const divisibleBy3 = (number) =>{
+    return (
+        typeof number !== "number" ? `The ${typeof number} of "${number}" is not a valid number.`:
+        number % 3 === 0 || number === 0 ? `${number} is divisible by three`:
+        `${number} is not divisible by three`
+    )
+}
+/* 
+---------- Green Test Results ---------------------
+    PASS  ./code-challenges.test.js
+    divisibleBy3
+        ✓ Takes in a number and returns whether or not it is divisible by 3 or not (2 ms)
+*/        
 
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
