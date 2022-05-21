@@ -153,19 +153,36 @@ describe("capitalizeFirstLetter", () => {
 
 */
 
-const capitalizeFirstLetter = (stringArr) => {
-    if(Array.isArray(stringArr)) {
-        return stringArr.map(word => {
-            if(word.length < 0) {
-                return word
-            } else {
-                return word.charAt(0).toUpperCase() + word.slice(1)
-            }
-        })
-    }
-}
-// --------------------3) Create a function that takes in a string and logs the index of the first vowel.
+// const capitalizeFirstLetter = (stringArr) => {
+//     if(Array.isArray(stringArr)) {
+//         return stringArr.map(word => {
+//             if(word.length < 0) {
+//                 return word
+//             } else {
+//                 return word.charAt(0).toUpperCase() + word.slice(1)
+//             }
+//         })
+//     }
+// }
 
+/* 
+---------- Green Test Results ---------------------
+PASS  ./code-challenges.test.js
+    divisibleBy3
+    ✓ Takes in a number and returns whether or not it is divisible by 3 or not (3 ms)
+    capitalizeFirstLetter
+        ✓ Takes in an array of words and returns an array of the words with the first letter of each string capitalized (1 ms)
+    // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
+*/
+
+/* 
+---------- Refactor ---------------------
+*/
+
+const capitalizeFirstLetter = stringArr => (Array.isArray(stringArr)) ? (stringArr.map(word => word.length > 0 ? word.charAt(0).toUpperCase() + word.slice(1): word)):stringArr
+
+
+// --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 // a) Create a test with expect statements for each of the variables provided.
 
 const vowelTester1 = "learn"
