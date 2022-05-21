@@ -103,15 +103,55 @@ const divisibleBy3 = number => typeof number !== "number" ? `The ${typeof number
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
-// Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
-const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
-// Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
+/*
+---------- Pseudo Code for Test ---------------------
+    Describe will take in name of function to be tested
+    It will describe what the functions outcome should return
+    Expect will have the individual test cases with the provided test data
+*/
 
+describe("capitalizeFirstLetter", () => {
+    it("Takes in an array of words and returns an array of the words with the first letter of each string capitalized", () => {
+        const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+        const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
+
+        expect(capitalizeFirstLetter(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(capitalizeFirstLetter(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+    })
+})
+
+/*
+---------- Red Test Results ---------------------
+    RED - (Failed Test Run)
+    FAIL  ./code-challenges.test.js
+    capitalizeFirstLetter
+        ✕ Takes in an array of words and returns an array of the words with the first letter of each string capitalized
+    ReferenceError: capitalizeFirstLetter is not defined
+*/
 
 // b) Create the function that makes the test pass.
 
+/* 
+---------- Pseudo Code ---------------------
+    Create a function named capitalizeFirstLetter
+    capitalizeFirstLetter takes in a single parameter which is an array of strings
+        Logic:
+            - Take in an array of strings
+            - Check if input is an array
+            - Iterate over each string in array
+                - If input is string check if it is at least one character long
+                - If string first letter is capitalized continue to next string
+                - If string first letter isn't capitalized, change to capital return string to array
+                - Once all strings have been gone through, return array with first letters capitalized
+    Test Arguments:
+        - First Input: ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+        - Second Input: ["temperature", "database", "chopsticks", "mango", "deduction"]
 
+    Expected Test Output:
+        - First Output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
+        - Second Output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
+
+*/
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
