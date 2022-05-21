@@ -153,6 +153,17 @@ describe("capitalizeFirstLetter", () => {
 
 */
 
+const capitalizeFirstLetter = (stringArr) => {
+    if(Array.isArray(stringArr)) {
+        return stringArr.map(word => {
+            if(word.length < 0) {
+                return word
+            } else {
+                return word.charAt(0).toUpperCase() + word.slice(1)
+            }
+        })
+    }
+}
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
 // a) Create a test with expect statements for each of the variables provided.
