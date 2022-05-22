@@ -28,10 +28,11 @@ const numbersArray2 = [24, 27, 30, 33, 36]
 
 // a) Create a test with expect statements for each of the variables provided.
 
-//Pseudo Code for Test
-    //Describe will take in name of function to be tested
-    //It will describe what the functions outcome should return
-    //Expect will have the individual test cases with the provided test data
+/* ---------- Pseudo Code for Test ---------------------
+    Describe will take in name of function to be tested
+    It will describe what the functions outcome should return
+    Expect will have the individual test cases with the provided test data
+*/
 
 describe("divisibleBy3", () => {
     it("Takes in a number and returns whether or not it is divisible by 3 or not", () => {
@@ -46,8 +47,7 @@ describe("divisibleBy3", () => {
         expect(divisibleBy3(num4)).toEqual("The string of \"ten\" is not a valid number.")
     })
 })
-/* 
----------- Red Test Results ---------------------
+/* ---------- Red Test Results ---------------------
     RED - (Failed Test Run)
     FAIL  ./code-challenges.test.js
     divisibleBy3
@@ -57,8 +57,7 @@ describe("divisibleBy3", () => {
 
 // b) Create the function that makes the test pass.
 
-/* 
----------- Pseudo Code ---------------------
+/* ---------- Pseudo Code ---------------------
     Create a function named divisibleBy3
     divisibleBy3 takes in a single parameter which is any number
         Logic:
@@ -88,14 +87,15 @@ describe("divisibleBy3", () => {
 //         `${number} is not divisible by three`
 //     )
 // }
-/* 
----------- Green Test Results ---------------------
+/* ---------- Green Test Results ---------------------
     PASS  ./code-challenges.test.js
     divisibleBy3
         ✓ Takes in a number and returns whether or not it is divisible by 3 or not (2 ms)
 */
-// Refactor
-//      - Refactored to remove parameter parenthesis and remove return statement for one line function - refactor would be good for minifying code, but poor for readability
+
+/* ---------- Refactor --------------------- 
+    - Refactored to remove parameter parenthesis and remove return statement for one line function - refactor would be good for minifying code, but poor for readability
+*/    
 
 const divisibleBy3 = number => typeof number !== "number" ? `The ${typeof number} of "${number}" is not a valid number.`: number % 3 === 0 || number === 0 ? `${number} is divisible by three`:`${number} is not divisible by three`    
 
@@ -103,8 +103,7 @@ const divisibleBy3 = number => typeof number !== "number" ? `The ${typeof number
 
 // a) Create a test with expect statements for each of the variables provided.
 
-/*
----------- Pseudo Code for Test ---------------------
+/* ---------- Pseudo Code for Test ---------------------
     Describe will take in name of function to be tested
     It will describe what the functions outcome should return
     Expect will have the individual test cases with the provided test data
@@ -120,8 +119,7 @@ describe("capitalizeFirstLetter", () => {
     })
 })
 
-/*
----------- Red Test Results ---------------------
+/* ---------- Red Test Results ---------------------
     RED - (Failed Test Run)
     FAIL  ./code-challenges.test.js
     capitalizeFirstLetter
@@ -131,8 +129,7 @@ describe("capitalizeFirstLetter", () => {
 
 // b) Create the function that makes the test pass.
 
-/* 
----------- Pseudo Code ---------------------
+/* ---------- Pseudo Code ---------------------
     Create a function named capitalizeFirstLetter
     capitalizeFirstLetter takes in a single parameter which is an array of strings
         Logic:
@@ -165,8 +162,7 @@ describe("capitalizeFirstLetter", () => {
 //     }
 // }
 
-/* 
----------- Green Test Results ---------------------
+/* ---------- Green Test Results ---------------------
 PASS  ./code-challenges.test.js
     divisibleBy3
     ✓ Takes in a number and returns whether or not it is divisible by 3 or not (3 ms)
@@ -175,9 +171,7 @@ PASS  ./code-challenges.test.js
     // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 */
 
-/* 
----------- Refactor ---------------------
-*/
+/* ---------- Refactor --------------------- */
 
 const capitalizeFirstLetter = stringArr => (Array.isArray(stringArr)) ? (stringArr.map(word => word.length > 0 ? word.charAt(0).toUpperCase() + word.slice(1): word)):stringArr
 
@@ -185,12 +179,86 @@ const capitalizeFirstLetter = stringArr => (Array.isArray(stringArr)) ? (stringA
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 // a) Create a test with expect statements for each of the variables provided.
 
-const vowelTester1 = "learn"
-// Expected output: 1
-const vowelTester2 = "academy"
-// Expected output: 0
-const vowelTester3 = "challenges"
-// Expected output: 2
+/* ---------- Pseudo Code for Test ---------------------
+    Describe will take in name of function to be tested
+    It will describe what the functions outcome should return
+    Expect will have the individual test cases with the provided test data
+*/
 
+describe("indexFirstVowel", () => {
+    it("Takes in a string and logs the index of the first vowel", () =>{
+        const vowelTester1 = "learn"        // Expected output: 1
+        const vowelTester2 = "academy"      // Expected output: 0
+        const vowelTester3 = "challenges"   // Expected output: 2
+        
+        expect(indexFirstVowel(vowelTester1)).toEqual(1)
+        expect(indexFirstVowel(vowelTester2)).toEqual(0)
+        expect(indexFirstVowel(vowelTester3)).toEqual(2)
+    })
+})
+
+/* ---------- Red Test Results ---------------------
+    RED - (Failed Test Run)
+    FAIL  ./code-challenges.test.js
+    divisibleBy3
+        ✓ Takes in a number and returns whether or not it is divisible by 3 or not (2 ms)
+    capitalizeFirstLetter
+        ✓ Takes in an array of words and returns an array of the words with the first letter of each string capitalized
+    indexFirstVowel
+        ✕ Takes in a string and logs the index of the first vowel
+    
+    ReferenceError: indexFirstVowel is not defined
+*/
 
 // b) Create the function that makes the test pass.
+
+/* ---------- Pseudo Code ---------------------
+    Create a function named indexFirstVowel
+    indexFirstVowel takes in a single parameter which is an string of unknown length
+        Logic:
+            - Take in a string
+            - Check if argument is a string
+            - Search string for the first occurrence of a vowel
+                - Once first vowel is found, find index of the vowel
+                - Return the vowels index
+    Test Arguments:
+        - First Input:  "learn" 
+        - Second Input: "academy" 
+        - Third Input:  "challenges"
+
+    Expected Test Output:
+        - First Output:     1
+        - Second Output:    0
+        - Third Output:     2
+
+*/
+
+// const indexFirstVowel = (string) => {
+//     if(typeof string === "string") {
+//         for(let i = 0; i < string.length; i++) {
+//             let letter = string[i].toLowerCase()
+//             switch(letter) {
+//                 case "a":
+//                 case "e":
+//                 case "i":
+//                 case "o":
+//                 case "u":
+//                     return string.indexOf(letter)
+//             }
+//         }
+//     }
+// }
+
+/* ---------- Green Test Results ---------------------
+ PASS  ./code-challenges.test.js
+  divisibleBy3
+    ✓ Takes in a number and returns whether or not it is divisible by 3 or not (2 ms)
+  capitalizeFirstLetter
+    ✓ Takes in an array of words and returns an array of the words with the first letter of each string capitalized
+  indexFirstVowel
+    ✓ Takes in a string and logs the index of the first vowel (1 ms)
+*/
+
+/* ---------- Refactor --------------------- */
+
+const indexFirstVowel = str => typeof str === "string" ? str.search(/[aeiou]/gi): -1
