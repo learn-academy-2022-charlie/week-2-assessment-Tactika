@@ -94,7 +94,7 @@ var learnStudent = new Learn("George")
 /* ------------------------------- Answers - Stretch Question ----------------------------------
 ------------------------------------------------------------------------------------------------
 a) Your answer:
-      A:  
+      A:  This should return a new Learn object with the student = "george", cohort = "Bravo", year = 2022
 b) Verify and explain:
-      A:  
+      A:  The log did return an object with the previous expected results. The reason behind this is because the Learn class is used to build a new student with just a name. The class has values predefined for the cohort and year but the constructor only requires a student name to be passed in to complete the class. The learnStudent variable is then requesting a new student by passing a name into the Learn class using the new keyword.
 */
