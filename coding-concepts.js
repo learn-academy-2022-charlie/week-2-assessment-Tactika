@@ -13,9 +13,9 @@ var cohort = "Bravo 2022"
 /* ---------------------------------- Answers - Question 1 -------------------------------------
 ------------------------------------------------------------------------------------------------
 a) Your answer:
-      A:  
+      A:  This will log the array ["B", "r", "a", "v", "o", " ", "2", "0", "2", "2"]
 b) Verify and explain:
-      A:  
+      A:  It logged out how I expected since the split method takes a string and separates by a provided arguement. The empty string is how you call to split after every character including spaces and special characters. A space  would split it by each word and a period could be a way to split by sentance.
 */
 
 // ----------------------------------2) What will this log?---------------------------------- //
@@ -40,9 +40,9 @@ var multBy2 = [4, 5, 6, 7, 8].map(value => value * 2)
 /* ---------------------------------- Answers - Question 3 -------------------------------------
 ------------------------------------------------------------------------------------------------
 a) Your answer:
-      A:  
+      A:  This will return an array of numbers [8, 10, 12, 14, 16]
 b) Verify and explain:
-      A:  
+      A:  Since the array of numbers had the map method iterate over the values of the arrays and returns the value times two to the array before moving to the next value. The console.log will return the array since the array that was mapped over is equal to the variable name multBy2. This is commonly used in functions to iterate over an input array.
 */
 
 
@@ -54,9 +54,9 @@ var onlyOdds = [11, 12, 13, 14, 15].filter(value => value % 2 !== 0)
 /* ---------------------------------- Answers - Question 4 -------------------------------------
 ------------------------------------------------------------------------------------------------
 a) Your answer:
-      A:  
+      A:  The console.log will log an array of odd numbers [11, 13, 15]
 b) Verify and explain:
-      A:  
+      A:  The console.log returned an array of odd numbers with the even numbers filtered out due to the use of the .filter method. The modulus operator returns the remainder and that then gets compared using the inequality comparison operator to zero, which would test if the item is an odd number. These values are then returned to the onlyOdds variable into a new array. This code could be used to filter out even characters by just changin one character in the inequality comparison operator.
 */
 
 
@@ -73,9 +73,9 @@ var myCodingSkills = {
 /* ---------------------------------- Answers - Question 5 -------------------------------------
 ------------------------------------------------------------------------------------------------
 a) Your answer:
-      A:  
+      A:  The console.log should output the string of 'JavaScript'
 b) Verify and explain:
-      A:  
+      A:  The log returned the string "JavaScript". The reason this was logged was because the myCodingSkills object was called with the dot notation of the languages key and a bracket/index notation of zero, which would grab the zeroth index "JavaScript".
 */
 
 
