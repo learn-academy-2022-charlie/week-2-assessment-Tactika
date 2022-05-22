@@ -186,7 +186,7 @@ const capitalizeFirstLetter = stringArr => (Array.isArray(stringArr)) ? (stringA
 */
 
 describe("indexFirstVowel", () => {
-    it("Takes in a string and logs the index of the first vowel", () =>{
+    it("Takes in a string and returns the index of the first vowel", () =>{
         const vowelTester1 = "learn"        // Expected output: 1
         const vowelTester2 = "academy"      // Expected output: 0
         const vowelTester3 = "challenges"   // Expected output: 2
@@ -205,7 +205,7 @@ describe("indexFirstVowel", () => {
     capitalizeFirstLetter
         ✓ Takes in an array of words and returns an array of the words with the first letter of each string capitalized
     indexFirstVowel
-        ✕ Takes in a string and logs the index of the first vowel
+        ✕ Takes in a string and returns the index of the first vowel
     
     ReferenceError: indexFirstVowel is not defined
 */
@@ -256,7 +256,7 @@ describe("indexFirstVowel", () => {
   capitalizeFirstLetter
     ✓ Takes in an array of words and returns an array of the words with the first letter of each string capitalized
   indexFirstVowel
-    ✓ Takes in a string and logs the index of the first vowel (1 ms)
+    ✓ Takes in a string and returns the index of the first vowel (1 ms)
 */
 
 /* ---------- Refactor --------------------- */
