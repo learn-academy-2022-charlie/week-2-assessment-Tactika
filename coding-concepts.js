@@ -15,7 +15,7 @@ var cohort = "Bravo 2022"
 a) Your answer:
       A:  This will log the array ["B", "r", "a", "v", "o", " ", "2", "0", "2", "2"]
 b) Verify and explain:
-      A:  It logged out how I expected since the split method takes a string and separates by a provided arguement. The empty string is how you call to split after every character including spaces and special characters. A space  would split it by each word and a period could be a way to split by sentance.
+      A:  It logged out how I expected since the split method takes a string and separates by a provided argument. The empty string is how you call to split after every character including spaces and special characters. A space  would split it by each word and a period could be a way to split by sentence.
 */
 
 // ----------------------------------2) What will this log?---------------------------------- //
@@ -56,7 +56,7 @@ var onlyOdds = [11, 12, 13, 14, 15].filter(value => value % 2 !== 0)
 a) Your answer:
       A:  The console.log will log an array of odd numbers [11, 13, 15]
 b) Verify and explain:
-      A:  The console.log returned an array of odd numbers with the even numbers filtered out due to the use of the .filter method. The modulus operator returns the remainder and that then gets compared using the inequality comparison operator to zero, which would test if the item is an odd number. These values are then returned to the onlyOdds variable into a new array. This code could be used to filter out even characters by just changin one character in the inequality comparison operator.
+      A:  The console.log returned an array of odd numbers with the even numbers filtered out due to the use of the .filter method. The modulus operator returns the remainder and that then gets compared using the inequality comparison operator to zero, which would test if the item is an odd number. These values are then returned to the onlyOdds variable into a new array. This code could be used to filter out even characters by just changing one character in the inequality comparison operator.
 */
 
 
